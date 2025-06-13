@@ -1,7 +1,7 @@
 import { inject, injectable } from 'inversify';
 import { IUserRepository } from '../../domain/interfaces/repositories/IUserRepository';
 import { User } from '../../domain/entities/User';
-import { TYPES } from '../../infrastructure/di/inversify.config';
+import { TYPES } from '../../infrastructure/di/types';
 
 @injectable()
 export class UserService {

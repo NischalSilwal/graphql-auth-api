@@ -2,7 +2,8 @@ import { AuthenticationError, UserInputError } from 'apollo-server-express';
 
 import { AuthService } from '../../application/services/AuthService';
 import { loginSchema, signupSchema } from '../schema/schemas';
-import { container, TYPES } from '../../infrastructure/di/inversify.config';
+import { container } from '../../infrastructure/di/inversify.config';
+import { TYPES } from '../../infrastructure/di/types';
 
 
 const authService = container.get<AuthService>(TYPES.AuthService);

@@ -1,6 +1,7 @@
 import { Router, Request, Response } from 'express';
 import { IUserRepository } from '../../domain/interfaces/repositories/IUserRepository';
-import { container, TYPES } from '../../infrastructure/di/inversify.config';
+import { container } from '../../infrastructure/di/inversify.config';
+import { TYPES } from '../../infrastructure/di/types';
 
 const router = Router();
 const userRepository = container.get<IUserRepository>(TYPES.UserRepository);

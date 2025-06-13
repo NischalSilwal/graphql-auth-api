@@ -8,14 +8,7 @@ import { UserRepository } from '../repositories/UserRepository';
 import { EmailService } from '../services/EmailService';
 import { AuthService } from '../../application/services/AuthService';
 import { AuthUtils } from '../services/AuthUtils';
-
-// Define TYPES here
-export const TYPES = {
-  UserRepository: Symbol.for('UserRepository'),
-  AuthUtils: Symbol.for('AuthUtils'),
-  EmailService: Symbol.for('EmailService'),
-  AuthService: Symbol.for('AuthService'),
-};
+import { TYPES } from './types';
 
 const container = new Container();
 

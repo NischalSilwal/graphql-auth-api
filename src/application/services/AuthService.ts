@@ -3,12 +3,8 @@ import { AuthenticationError, UserInputError, ForbiddenError } from 'apollo-serv
 import { IUserRepository } from '../../domain/interfaces/repositories/IUserRepository';
 import { IAuthService } from '../../domain/interfaces/services/IAuthService';
 import { IEmailService } from '../../domain/interfaces/services/IEmailService';
-
-
 import { AuthPayloadDto, AuthTokensDto, LoginDto, SignupDto } from '../dto/AuthDto';
-import { TYPES } from '../../infrastructure/di/inversify.config';
-
-
+import { TYPES } from '../../infrastructure/di/types';
 
 @injectable()
 export class AuthService {

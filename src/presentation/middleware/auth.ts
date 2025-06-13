@@ -1,6 +1,7 @@
 import { Request } from 'express';
 import { IAuthService } from '../../domain/interfaces/services/IAuthService';
-import { container, TYPES } from '../../infrastructure/di/inversify.config';
+import { container } from '../../infrastructure/di/inversify.config';
+import { TYPES } from '../../infrastructure/di/types';
 
 const authUtils = container.get<IAuthService>(TYPES.AuthUtils);
 
