@@ -38,14 +38,14 @@ export const signupSchema = Joi.object({
     }),
 
   password: Joi.string()
-    .min(6)
-    .pattern(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)/)
-    .required()
-    .messages({
-      'string.min': 'Password must be at least 6 characters long',
-      'string.pattern.base': 'Password must contain at least one uppercase letter, one lowercase letter, and one number',
-      'any.required': 'Password is required',
-    }),
+  .pattern(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{6,}$/)
+  .required()
+  .messages({
+    'string.pattern.base':
+      'Password must contain at least one uppercase letter, one lowercase letter, one number, and be at least 6 characters long',
+    'any.required': 'Password is required',
+  }),
+
 });
 
 export const loginSchema = Joi.object({
