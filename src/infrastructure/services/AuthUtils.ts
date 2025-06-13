@@ -2,8 +2,9 @@ import { injectable } from 'inversify';
 import jwt, { Secret } from 'jsonwebtoken';
 import bcrypt from 'bcryptjs';
 import crypto from 'crypto';
-import { config } from '../config/config';
+
 import { IAuthService } from '../../domain/interfaces/services/IAuthService';
+import { config } from '../config/config';
 
 @injectable()
 export class AuthUtils implements IAuthService {

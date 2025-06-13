@@ -1,8 +1,8 @@
 import { injectable } from 'inversify';
 import { RowDataPacket, ResultSetHeader } from 'mysql2';
-import Database from '../config/database';
 import { User } from '../../domain/entities/User';
 import { IUserRepository } from '../../domain/interfaces/repositories/IUserRepository';
+import Database from '../config/database';
 
 @injectable()
 export class UserRepository implements IUserRepository {

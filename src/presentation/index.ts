@@ -5,10 +5,10 @@ import cors from 'cors';
 import helmet from 'helmet';
 import rateLimit from 'express-rate-limit';
 import dotenv from 'dotenv';
-import Database from '../config/database';
 import { getContext } from './middleware/auth';
 import { resolvers } from './resolvers';
 import { typeDefs } from './schema/typeDefs';
+import Database from '../infrastructure/config/database';
 
 
 async function startServer(): Promise<void> {

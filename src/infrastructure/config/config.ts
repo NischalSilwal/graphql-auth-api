@@ -52,7 +52,7 @@ export const config: Config = {
   nodeEnv: process.env.NODE_ENV || 'development',
   database: {
     host: process.env.DB_HOST || 'localhost',
-    port: parseInt(process.env.DB_PORT || '3306', 10),
+    port: parseInt(process.env.DB_PORT || '3307', 10),
     name: process.env.DB_NAME || 'auth_db',
     user: process.env.DB_USER || 'auth_user',
     password: process.env.DB_PASSWORD || 'auth_password',
