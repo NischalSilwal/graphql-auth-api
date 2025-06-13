@@ -2,40 +2,45 @@
   "name": "graphql-auth-api",
   "version": "1.0.0",
   "description": "Apollo GraphQL Authentication API with JWT and Email Verification",
-  "main": "dist/index.js",
+  "main": "dist/presentation/index.js",
   "resolutions": {
-    "@types/express": "^4.17.21",
-    "@types/express-serve-static-core": "^4.17.31"
+    "@types/express": "4.17.21",
+    "@types/express-serve-static-core": "4.19.5"
   },
   "scripts": {
+    "preinstall": "npx npm-force-resolutions",
     "build": "tsc",
-    "start": "node dist/index.js",
-    "dev": "ts-node-dev --respawn --transpile-only src/index.ts",
+    "start": "node dist/presentation/index.js",
+    "dev": "ts-node-dev --respawn --transpile-only src/presentation/index.ts",
     "docker:up": "docker-compose up -d",
     "docker:down": "docker-compose down"
   },
   "dependencies": {
-    "apollo-server-express": "^3.12.0",
+    "@types/express": "4.17.21",
+    "apollo-server-express": "^3.13.0",
     "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
-    "dotenv": "^16.0.3",
-    "express": "^4.18.2",
-    "express-rate-limit": "^6.7.0",
+    "dotenv": "^16.5.0",
+    "express": "^4.21.2",
+    "express-rate-limit": "^6.11.2",
     "graphql": "^16.6.0",
-    "helmet": "^6.1.5",
+    "helmet": "^6.2.0",
+    "inversify": "^7.5.2",
     "joi": "^17.8.3",
-    "jsonwebtoken": "^9.0.0",
+    "jsonwebtoken": "^9.0.2",
     "mysql2": "^3.2.0",
-    "nodemailer": "^6.9.1"
+    "nodemailer": "^6.9.1",
+    "reflect-metadata": "^0.2.2"
   },
   "devDependencies": {
     "@types/bcryptjs": "^2.4.2",
     "@types/cors": "^2.8.13",
-    "@types/express": "^4.17.17",
-    "@types/jsonwebtoken": "^9.0.1",
-    "@types/node": "^18.15.11",
+    "@types/express": "^4.17.13",
+    "@types/inversify": "^2.0.32",
+    "@types/jsonwebtoken": "^9.0.2",
+    "@types/node": "^18.19.111",
     "@types/nodemailer": "^6.4.7",
     "ts-node-dev": "^2.0.0",
-    "typescript": "^5.0.2"
+    "typescript": "^5.8.3"
   }
 }
